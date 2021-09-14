@@ -21,10 +21,11 @@ A quick rundown of the actions included can be seen in the following table:
 |     GET    |           /createdb           | Creates and populates the database with dummy data |
 |     GET    |               /               |                     VAmPI home                     |
 |     GET    |           /users/v1           |      Displays all users with basic information     |
+|     GET    |           /users/v1?limit={int}           |      Displays all users with size limit with basic information     |
 |     GET    |        /users/v1/_debug       |         Displays all details for all users         |
 |    POST    |       /users/v1/register      |                  Register new user                 |
 |    POST    |        /users/v1/login        |                   Login to VAmPI                   |
-|    GET     |        /users/v1/login?username={user}&password={pass}        |                   Login to VAmPI                   |
+|    GET     |        /users/v1/login?username={string}&password={string}        |                   Login to VAmPI via URL                  |
 |     GET    |      /users/v1/{username}     |              Displays user by username             |
 |   DELETE   |      /users/v1/{username}     |       Deletes user by username (Only Admins)       |
 |     PUT    |   /users/v1/{username}/email  |             Update a single users email            |
@@ -45,6 +46,8 @@ For more details you can use a service like the [swagger editor](https://editor.
  - User and Password Enumeration
  - RegexDOS (Denial of Service)
  - Lack of Resources & Rate Limiting
+ - Information exposure through query strings in url (Username and Password are passed via URL)
+ - Not set any limit on Number of records per page to return in a single request response.
 
 
 
