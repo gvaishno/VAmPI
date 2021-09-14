@@ -24,6 +24,7 @@ A quick rundown of the actions included can be seen in the following table:
 |     GET    |        /users/v1/_debug       |         Displays all details for all users         |
 |    POST    |       /users/v1/register      |                  Register new user                 |
 |    POST    |        /users/v1/login        |                   Login to VAmPI                   |
+|    GET     |        /users/v1/login?username={user}&password={pass}        |                   Login to VAmPI                   |
 |     GET    |      /users/v1/{username}     |              Displays user by username             |
 |   DELETE   |      /users/v1/{username}     |       Deletes user by username (Only Admins)       |
 |     PUT    |   /users/v1/{username}/email  |             Update a single users email            |
