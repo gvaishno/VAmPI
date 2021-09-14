@@ -13,8 +13,12 @@ def error_message_helper(msg):
     return '{ "status": "fail", "message": "' + msg + '"}'
 
 
-def get_all_users():
-    return_value = jsonify({'users': User.get_all_users()})
+def get_all_users(**kwargs):
+    limit = kwargs.get('limit', None)
+    if limit:
+        return_value = jsonify({'users': User.get_all_users()[:limit]})
+    else:
+        return_value = jsonify({'users': User.get_all_users()})
     return return_value
 
 

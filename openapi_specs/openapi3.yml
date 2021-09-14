@@ -36,6 +36,12 @@ paths:
       summary: Retrieves all users
       description: Displays all users with basic information
       operationId: api_views.users.get_all_users
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
       responses:
         200:
           description: See basic info about all users

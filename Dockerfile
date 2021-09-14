@@ -4,7 +4,7 @@ RUN mkdir /vampi
 RUN apk --update add bash nano
 
 ENV vulnerable=1
-ENV tokentimetolive=60
+ENV tokentimetolive=60*5
 
 COPY . /vampi
 WORKDIR /vampi
